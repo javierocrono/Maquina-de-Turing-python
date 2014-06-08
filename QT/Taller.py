@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'Taller.ui'
 #
-# Created: Sun Jun  8 15:14:34 2014
+# Created: Sun Jun  8 13:23:37 2014
 #      by: pyside-uic 0.2.15 running on PySide 1.2.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -43,9 +43,7 @@ class Ui_Dialog(object):
         self.label.setGeometry(QtCore.QRect(390, 80, 151, 20))
         self.label.setObjectName("label")
         self.tableView = QtGui.QTableView(Dialog)
-        self.tableView.setEnabled(True)
         self.tableView.setGeometry(QtCore.QRect(30, 120, 711, 431))
-        self.tableView.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.tableView.setObjectName("tableView")
 
         self.retranslateUi(Dialog)
