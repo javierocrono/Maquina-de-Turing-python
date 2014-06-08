@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>770</width>
+    <height>582</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="NewP">
+   <property name="geometry">
+    <rect>
+     <x>372</x>
+     <y>30</y>
+     <width>141</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nuevo producto</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Edit">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>30</y>
+     <width>103</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Editar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Del">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>30</y>
+     <width>103</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Eliminar</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>80</y>
+     <width>311</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string extracomment="asdasd"> Que producto esta buscando?</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>70</y>
+     <width>118</width>
+     <height>3</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>80</y>
+     <width>191</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Marcas</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Nike</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>HP</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Dell</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Puma</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Samsung</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>80</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Seleccione una marca</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tableView">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>120</y>
+     <width>711</width>
+     <height>431</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
