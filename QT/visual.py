@@ -34,7 +34,7 @@ class Principal(QtGui.QWidget, Taller.Ui_Dialog):
         fk = self.ui.comboBox.itemData("fk_id_marca")
         self.filtro = fk
         self.load()
-
+#
 
     def load(self):
         productos = bd.obtener(self.filtro)
