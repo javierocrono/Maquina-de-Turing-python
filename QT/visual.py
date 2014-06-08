@@ -22,7 +22,7 @@ class Principal(QtGui.QWidget, Taller.Ui_Dialog):
     def render_table(self):
         self.table = self.tableView
         self.table.setFixedWidth(790)
-        self.table.setFixedHeight(450)
+        self.table.setFixedHeight(300)
         self.table.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
         self.table.setAlternatingRowColors(True)
         self.table.setSortingEnabled(True)
