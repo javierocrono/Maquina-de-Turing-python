@@ -50,6 +50,7 @@ def obtener(filtro):
         conn = sqlite3.connect("producto.db")
         c = conn.cursor()
         query = """DELETE from Producto WHERE codigo = ?"""
+
         try:
             exito = True
             c.execute(query, [cod])
