@@ -43,3 +43,20 @@ def obtener(filtro):
             print "Error:", e.args[0]
         conn.close()
         return exito
+
+
+    def eliminar(cod):
+        exito = False
+        conn = sqlite3.connect("producto.db")
+        c = conn.cursor()
+        query = """DELETE from Producto WHERE codigo = ?"""
+
+        try:
+            exito = True
+            c.execute(query, [cod])
+            conn.commit()
+        except qlite3.Error as e:
+            exito = False
+            print "Error", e.args[0]
+        conn.close()
+        return exito
