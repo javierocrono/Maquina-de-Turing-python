@@ -13,7 +13,7 @@ class Principal(QtGui.QWidget, Taller.Ui_Dialog):
     def __init__(self,parent=None):
         super(Principal, self).__init__(parent)
         self.setupUi(self)
-        self.filtro = "all"
+        self.filtro = "0"
         self.fk = ""
         self.main_layout = QtGui.QVBoxLayout(self)
         self.render_table()

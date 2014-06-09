@@ -9,7 +9,7 @@ def conectar():
     return con
 
 def obtener(filtro):
-    if filtro == "all":
+    if filtro == "0":
         con = conectar()
         c = con.cursor()
         query = "SELECT * FROM  producto"
