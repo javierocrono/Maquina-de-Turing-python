@@ -14,10 +14,12 @@ class Principal(QtGui.QWidget, Taller.Ui_Dialog):
         super(Principal, self).__init__(parent)
         self.setupUi(self)
         self.filtro = "all"
+        self.fk = ""
         self.main_layout = QtGui.QVBoxLayout(self)
         self.render_table()
-        self.load()
+        self.load(self.filtro)
         self.show()
+        self.index = self.comboBox.activated.connect(self.filtrar)
 
 
     def render_table(self):
@@ -29,15 +31,15 @@ class Principal(QtGui.QWidget, Taller.Ui_Dialog):
         self.table.setSortingEnabled(True)
         self.main_layout.addWidget(self.table)
 
-    def filtrar(self, index):
-        self.comboBox.activated[int].connect()
-        fk = self.ui.comboBox.itemData("fk_id_marca")
-        self.filtro = fk
-        self.load()
-#
+    def filtrar(self,index):
+        #metodo que se inicia al usar el combobox, capturando el index
+        a = str(index)
+        self.filtro = a
+        self.load(self.filtro)
 
-    def load(self):
-        productos = bd.obtener(self.filtro)
+
+    def load(self,filtro):
+        productos = bd.obtener(filtro)
         self.model = QtGui.QStandardItemModel(len(productos), 6)
         self.model.setHorizontalHeaderItem(0, QtGui.QStandardItem(u"Codigo"))
         self.model.setHorizontalHeaderItem(1, QtGui.QStandardItem(u"Nombre"))
