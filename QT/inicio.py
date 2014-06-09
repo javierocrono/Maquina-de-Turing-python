@@ -64,7 +64,7 @@ class Principal(QtGui.QWidget, ventanaCredenciales.Ui_ventanaCredenciales):
                         manejoUsuarios.crear(nombre, contrasenia)
                         msgbox.setText("Usuario exitosamente Registrado")
                         msgbox.exec_()
-                        self.buttonRegistro.move(30,230)
+                        self.buttonRegistro.move(30, 230)
                         self.buttonAceptar.show()
                         self.enRegistro = False
                         self.setWindowTitle("Inicio de Sesion")
