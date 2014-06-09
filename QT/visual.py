@@ -6,9 +6,10 @@ from PySide import QtGui, QtCore
 from PySide.QtGui import *
 import Taller
 import bd
+import agregar
 
 
-class Principal(QtGui.QWidget, Taller.Ui_Dialog):
+class Principal(QtGui.QWidget, Taller.Ui_Dialog, agregar.Ui_AddP):
 
     def __init__(self,parent=None):
         super(Principal, self).__init__(parent)
@@ -20,7 +21,18 @@ class Principal(QtGui.QWidget, Taller.Ui_Dialog):
         self.load(self.filtro)
         self.show()
         self.index = self.comboBox.activated.connect(self.filtrar)
+        self.NewP.clicked.connect(self.agrega)
+        self.Edit.clicked.connect(self.editar)
+        self.Del.clicked.connect(self.eliminar)
 
+    def agrega(self):
+        print "agregar" #aca va el metodo que abre la ventana agregar.ui
+
+    def editar(self):
+        print "editar" #aca va el metodo que captura la linea a editar
+
+    def eliminar(self): #aca va el metodo que selecciona la linea a eliminar
+        print "eliminar"
 
     def render_table(self):
         self.table = self.tableView

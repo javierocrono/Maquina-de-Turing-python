@@ -25,3 +25,21 @@ def obtener(filtro):
         producto = resultado.fetchall()
         con.close()
         return producto
+
+    def insertar(cod, nombre, desc, col, prec, fk):
+        exito = False
+        conn = sqlite3.connect("producto.db")
+        c = conn.cursor()
+        query = """INSERT INTO Producto (codigo, nombre, descripcion, color,
+        precio, fk_id_marca)
+        VALUES (?, ?, ?, ?, ?, ?)"""
+        valores = [cod, nombre, desc, col, prec, fk]
+        try:
+            c.execute(query, valores)
+            conn.commit()
+            exito = True
+        except sqlite3.Error as e:
+            exito = False
+            print "Error:", e.args[0]
+        conn.close()
+        return exito
