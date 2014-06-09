@@ -18,6 +18,7 @@ class Principal(QtGui.QWidget, ventanaCredenciales.Ui_ventanaCredenciales):
         self.move(450, 200)
         self.buttonAceptar.clicked.connect(self.sesion)
         self.buttonRegistro.clicked.connect(self.registro)
+        self.buttonCancelar.clicked.connect(self.cancelar)
         self.main_layout = QtGui.QVBoxLayout(self)
 
         self.enRegistro = False
@@ -74,6 +75,22 @@ class Principal(QtGui.QWidget, ventanaCredenciales.Ui_ventanaCredenciales):
                 msgbox.setText("Usuario Invalido")
                 msgbox.exec_()
 
+    def cancelar(self):
+        if (self.enRegistro is False):
+            if (self.lineNombre.text() != "" or self.lineContrasenia.text() != ""):
+                self.lineNombre.setText("")
+                self.lineContrasenia.setText("")
+            else:
+                self.close()
+        else:
+            if (self.lineNombre.text() != "" or self.lineContrasenia.text() != ""):
+                self.lineNombre.setText("")
+                self.lineContrasenia.setText("")
+            else:
+                self.buttonRegistro.move(30, 230)
+                self.buttonAceptar.show()
+                self.enRegistro = False
+                self.setWindowTitle("Inicio de Sesion")
 
 def run():
     app = QtGui.QApplication(sys.argv)
