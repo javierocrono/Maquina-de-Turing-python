@@ -37,7 +37,9 @@ class Principal(QtGui.QWidget, ventanaCredenciales.Ui_ventanaCredenciales):
                 msgbox = QMessageBox()
                 msgbox.setText("Bienvenido " + nombre)
                 msgbox.exec_()
-                self.close()
+                self.hide()
+                self.visualizar()
+
             else:
                 msgbox = QMessageBox()
                 msgbox.setText("Usuario/Contrasenia invalidos, para registrarse presione el boton 'Registrarse'")
@@ -91,6 +93,11 @@ class Principal(QtGui.QWidget, ventanaCredenciales.Ui_ventanaCredenciales):
                 self.buttonAceptar.show()
                 self.enRegistro = False
                 self.setWindowTitle("Inicio de Sesion")
+
+    def visualizar(self):
+        """Funcion que llama al formualrio de nuevo usuario"""
+        app = visual.Principal()
+        app.exec_()
 
 def run():
     app = QtGui.QApplication(sys.argv)
