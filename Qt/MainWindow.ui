@@ -23,7 +23,7 @@
       <height>341</height>
      </rect>
     </property>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="line_inicial">
      <property name="geometry">
       <rect>
        <x>190</x>
@@ -33,7 +33,7 @@
       </rect>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_2">
+    <widget class="QLineEdit" name="line_final">
      <property name="geometry">
       <rect>
        <x>190</x>
@@ -82,7 +82,7 @@
       <string>Transiciones:</string>
      </property>
     </widget>
-    <widget class="QTextEdit" name="textEdit">
+    <widget class="QTextEdit" name="text_transiciones">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -92,7 +92,7 @@
       </rect>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="btn_ingresar">
      <property name="geometry">
       <rect>
        <x>340</x>
@@ -148,7 +148,7 @@
       <height>121</height>
      </rect>
     </property>
-    <widget class="QLineEdit" name="lineEdit_3">
+    <widget class="QLineEdit" name="line_palabra">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -171,7 +171,7 @@
       <string>Palabra de entrada</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="btn_verificar">
      <property name="geometry">
       <rect>
        <x>300</x>
@@ -184,19 +184,6 @@
       <string>Verificar</string>
      </property>
     </widget>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>540</x>
-      <y>360</y>
-      <width>231</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Palabra Aceptada/Rechazada</string>
-    </property>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
