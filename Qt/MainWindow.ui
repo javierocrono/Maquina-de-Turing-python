@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>826</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Simulador M.Turing 1Cinta</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>461</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>250</y>
+       <width>113</width>
+       <height>27</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>300</y>
+       <width>113</width>
+       <height>27</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>250</y>
+       <width>101</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Estado Inicial:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>300</y>
+       <width>91</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Estado Final:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>111</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Transiciones:</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="textEdit">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>40</y>
+       <width>411</width>
+       <height>181</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>270</y>
+       <width>98</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ingresar</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>30</y>
+      <width>291</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <widget class="QTableView" name="tableView">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>40</y>
+       <width>261</width>
+       <height>251</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>111</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>MT Resultante:</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_3" native="true">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>390</y>
+      <width>711</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <widget class="QLineEdit" name="lineEdit_3">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>40</y>
+       <width>571</width>
+       <height>27</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Palabra de entrada</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>80</y>
+       <width>98</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Verificar</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>360</y>
+      <width>231</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Palabra Aceptada/Rechazada</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
