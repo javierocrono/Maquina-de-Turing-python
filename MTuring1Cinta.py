@@ -1,6 +1,6 @@
 class MTuring1Cinta:
 
-    def __init__(self, transiciones, estados, alfabeto):
+    def Principal(self, transiciones, estados, alfabeto):
         self.inicial = ""  # estado inicial
         self.final = ""  # estado final
         self.estados = estados  # arreglo de estados

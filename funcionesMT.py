@@ -1,7 +1,8 @@
 def agregaEstIni(estIni):
     if(estIni != ""):
-        if (estIni in estados):
+        if (estIni in self.estados):
             self.inicial = estIni
+            salida = "Estado Final agregado"
         else:
             salida = "Ingrese un estado Inicial Valido"
     else:
@@ -10,9 +11,9 @@ def agregaEstIni(estIni):
 
 
 def agregaEstFin(estFin):
-    if(estIni != ""):
-        if (estIni in estados):
-            self.inicial = estIni
+    if(estFin != ""):
+        if (estFin in self.estados):
+            self.final = estFin
             salida = "Estado Final agregado"
         else:
             salida = "Ingrese un estado Final Valido"
@@ -23,7 +24,7 @@ def agregaEstFin(estFin):
 
 def aceptaPalabra(palabra):
     correcto = True
-    for (int i =0, i<palabra.length(), i++):
+    for i in range(palabra.length()):
         if (palabra[i] not in self.alfabeto):
             correcto = False
     if (correcto):
@@ -32,7 +33,7 @@ def aceptaPalabra(palabra):
         estadoActual = self.inicial
         posEstadoActual = self.estados.find(estadoactual)
         transicion = self.transiciones[posEstadoActual][posSimbolo]
-        escribo=""
+        escribo = ""
         while (estadoActual != self.final or transicion == ""):
             pass
         if(estadoActual == self.final):
