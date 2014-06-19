@@ -29,20 +29,43 @@ class MTuring1Cinta:
             salida = "Ingrese algun estado Final"
         return salida
 
-    def aceptaPalabra(self, palabra):
+    def aceptaPalabra(self, pala):
+        palabra = list(pala)
+        print palabra
         correcto = True
-        for i in range(palabra.length()):
-            if (palabra[i] not in self.alfabeto):
+        for i in palabra:
+            if (i not in self.alfabeto):
                 correcto = False
         if (correcto):
-            simboloCinta = palabra[0]
-            posSimbolo = self.alfabeto.find(simboloCinta)
+            self.inicial = 'q0'
+            self.final = 'q4'
+            print correcto
+            i = 0
+            simboloCinta = palabra[i]
             estadoActual = self.inicial
-            posEstadoActual = self.estados.find(estadoActual)
+            posSimbolo = self.alfabeto.index(simboloCinta)
+            posEstadoActual = self.estados.index(estadoActual)
             transicion = self.transiciones[posEstadoActual][posSimbolo]
-            escribo = ""
-            while (estadoActual != self.final or transicion == ""):
-                pass
+            while (estadoActual != self.final and transicion != "**************"):
+                print simboloCinta
+                print "transicion"
+                print transicion
+                estadoSiguiente = transicion[0]
+                escribo = transicion[1]
+                direccionAvance = transicion[2]
+                palabra[i] = escribo
+                print palabra
+                estadoActual = estadoSiguiente
+                print estadoActual
+                if (direccionAvance == 'D'):
+                    i = i + 1
+                else:
+                    i = i - 1
+                if (i < len(palabra)):
+                    simboloCinta = palabra[i]
+                posSimbolo = self.alfabeto.index(simboloCinta)
+                posEstadoActual = self.estados.index(estadoActual)
+                transicion = self.transiciones[posEstadoActual][posSimbolo]
             if(estadoActual == self.final):
                 salida = "Palabra Aceptada"
             else:
